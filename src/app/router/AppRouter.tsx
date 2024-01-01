@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
+import { Login } from "@/pages/login"
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -7,10 +9,10 @@ const router = createBrowserRouter([
     },
     {
         path: "/login",
-        element: <p>Login</p>,
+        element: <Login />,
     },
 ])
 
-export function AppRouter() {
+export function AppRouter () {
     return <RouterProvider router={router} />
 }
