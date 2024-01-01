@@ -1,9 +1,9 @@
 /* eslint-disable react-refresh/only-export-components */
-import { withProviders } from "./providers";
-import { AppRouter } from "@/src/app/router/AppRouter";
+import { withProviders } from "./providers"
+import { AppRouter } from "@/src/app/router/AppRouter"
 
 const App = () => {
-  return <AppRouter />;
-};
+    return <AppRouter />
+}
 
-export default withProviders(App);
+export default withProviders(App)

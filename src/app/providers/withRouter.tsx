@@ -1,5 +1,5 @@
-import { Suspense } from "react";
+import { Suspense } from "react"
 
 export const withRouter = (component: () => React.ReactNode) => () => (
-  <Suspense fallback="Loading...">{component()}</Suspense>
-);
+    <Suspense fallback="Loading...">{component()}</Suspense>
+)
