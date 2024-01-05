@@ -12,22 +12,22 @@ const featuresContent: Array<FeaturesContentTypes> = [
     {
         title: 'ReactJs',
         icon: ReactIcon,
-        content: 'ReactJS is a declarative and efficient JavaScript library for building user interfaces, making it simpler to create interactive and dynamic web applications.'
+        content: 'Declarative and efficient JavaScript library for building user interfaces.'
     },
     {
-        title: 'ChakraUi',
+        title: 'Components',
         icon: ChakraUiIcon,
-        content: 'a user-friendly and modular component library for React, offering essential building blocks with accessibility in mind'
+        content: 'UI components built using ChakraUi.'
     },
     {
         title: 'Vite',
         icon: ViteJsIcon,
-        content: '---'
+        content: 'Next generation frontend tooling'
     },
     {
         title: 'Typescript',
         icon: TypescriptIcon,
-        content: '---'
+        content: 'A language for application-scale JavaScript'
     }
 ]
 
@@ -54,7 +54,7 @@ export default function Features () {
 
 const FeatureCard = ({ feature: { title, content, icon } }: { feature: FeaturesContentTypes } ) => {
     return (
-        <VStack bg={useColorModeValue('white', 'gray.800')} h='full' align="start" border="1px" p="5" borderColor={useColorModeValue('gray.200', 'gray.700')} rounded="md">
+        <VStack bg={useColorModeValue('white', 'gray.800')} h='full' align="start" border="1px" p="4" borderColor={useColorModeValue('gray.200', 'gray.700')} rounded="md">
             <Box w='10' h="10">
                 <Image src={icon} alt="" />
             </Box>
