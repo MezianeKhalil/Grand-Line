@@ -1,5 +1,6 @@
-import { Box, Flex, Text, Button, Stack, Container, useColorModeValue } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Box, Flex, Text, Button, Stack, Container, useColorModeValue, IconButton, Link } from '@chakra-ui/react'
+import { Link as RouterLink } from 'react-router-dom'
+import { FaGithub } from "react-icons/fa"
 
 import { ThemeToggle } from '@/shared/ui/themeToggle'
 
@@ -21,7 +22,7 @@ export default function Navbar () {
                 <Flex align={'center'}>
                     <Flex flex={{ base: 1 }}>
                         <Text
-                            as={Link}
+                            as={RouterLink}
                             to='/'
                             fontSize="xl"
                             fontWeight="medium"
@@ -38,8 +39,17 @@ export default function Navbar () {
                         spacing={2}
                     >
                         <ThemeToggle />
-                        <Button
+                        <IconButton
                             as={Link}
+                            icon={<FaGithub />}
+                            href="https://github.com/MezianeKhalil/Grand-Line"
+                            isExternal
+                            aria-label="github repository"
+                            variant="outline"
+                            fontSize={'lg'}
+                        />
+                        <Button
+                            as={RouterLink}
                             to='/login'
                             variant="outline"
                             fontSize={'lg'}
