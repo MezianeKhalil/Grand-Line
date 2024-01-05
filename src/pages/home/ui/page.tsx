@@ -1,11 +1,14 @@
-import { Navbar, Header, Features, Footer } from "./components"
+import { Navbar, Header, Features, Footer, Codebase } from "./components"
 
 export default function Home () {
     return (
         <>
             <Navbar />
             <Header />
-            <Features />
+            <main>
+                <Features />
+                <Codebase />
+            </main>
             <Footer />
         </>
     )

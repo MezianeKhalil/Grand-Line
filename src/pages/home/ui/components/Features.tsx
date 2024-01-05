@@ -1,4 +1,4 @@
-import { Box, Container, Image, Grid, GridItem, Heading, Text, VStack } from '@chakra-ui/react'
+import { Box, Container, Image, Grid, GridItem, Heading, Text, VStack, useColorModeValue } from '@chakra-ui/react'
 
 import { ChakraUiIcon, ReactIcon, TypescriptIcon, ViteJsIcon } from "@/shared/assets/icons"
 
@@ -33,10 +33,9 @@ const featuresContent: Array<FeaturesContentTypes> = [
 
 export default function Features () {
     return (
-        <Box as="section" py="12">
+        <Box as="section" py="12" bg={useColorModeValue('gray.50', 'gray.900')}>
             <Container maxW="7xl">
                 <Heading as="h2" textAlign="center">Features</Heading>
-                <Text textAlign="center" w={{ base: '100%',  md: '80%', lg: '70%', xl: '60%' }} mx="auto">ChakraFlow brings you all the essential UI components and features you'd expect from a comprehensive UI library, ready to kickstart your Chakra UI web project with style and functionality.</Text>
                 <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap={3} py='8'>
                     {
                         featuresContent.map(feature => {
@@ -55,7 +54,7 @@ export default function Features () {
 
 const FeatureCard = ({ feature: { title, content, icon } }: { feature: FeaturesContentTypes } ) => {
     return (
-        <VStack h='full' align="start" border="1px" p="5" borderColor='gray.200' rounded="md">
+        <VStack bg={useColorModeValue('white', 'gray.800')} h='full' align="start" border="1px" p="5" borderColor={useColorModeValue('gray.200', 'gray.700')} rounded="md">
             <Box w='10' h="10">
                 <Image src={icon} alt="" />
             </Box>
