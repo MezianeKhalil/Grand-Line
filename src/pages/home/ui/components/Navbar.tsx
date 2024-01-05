@@ -1,12 +1,5 @@
-import {
-    Box,
-    Flex,
-    Text,
-    Button,
-    Stack,
-    Container,
-    useColorModeValue
-} from '@chakra-ui/react'
+import { Box, Flex, Text, Button, Stack, Container, useColorModeValue } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 import { ThemeToggle } from '@/shared/ui/themeToggle'
 
@@ -28,6 +21,8 @@ export default function Navbar () {
                 <Flex align={'center'}>
                     <Flex flex={{ base: 1 }}>
                         <Text
+                            as={Link}
+                            to='/'
                             fontSize="xl"
                             fontWeight="medium"
                             color={useColorModeValue('gray.800', 'white')}
@@ -40,15 +35,16 @@ export default function Navbar () {
                         flex={{ base: 1, md: 0 }}
                         justify={'flex-end'}
                         direction={'row'}
-                        spacing={6}
+                        spacing={2}
                     >
                         <ThemeToggle />
                         <Button
+                            as={Link}
+                            to='/login'
                             variant="outline"
                             fontSize={'lg'}
                             fontWeight={400}
                             px="8"
-                            py="6"
                         >
                             Live Preview
                         </Button>
