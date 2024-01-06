@@ -9,8 +9,6 @@ export function ThemeToggle () {
             alignSelf={"center"}
             size={"md"}
             backgroundColor={useColorModeValue("white", "gray.700")}
-            border={"1px"}
-            borderColor={useColorModeValue("gray.200", "gray.700")}
             variant={"ghost"}
             aria-label={"toggle Color Mode"}
             onClick={toggleColorMode}

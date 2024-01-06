@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Button, Stack, Container, useColorModeValue, IconButton, Link } from '@chakra-ui/react'
+import { Box, Flex, Text, Stack, Container, useColorModeValue, IconButton, Link } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 import { FaGithub } from "react-icons/fa"
 
@@ -11,7 +11,7 @@ export default function Navbar () {
             as="nav"
             bg={useColorModeValue('white', 'gray.800')}
             color={useColorModeValue('gray.600', 'white')}
-            minH={'60px'}
+            minH={'14'}
             py={{ base: 2 }}
             px={{ base: 4 }}
             borderBottom={1}
@@ -46,19 +46,9 @@ export default function Navbar () {
                             href="https://github.com/MezianeKhalil/Grand-Line"
                             isExternal
                             aria-label="github repository"
-                            variant="outline"
+                            variant="ghost"
                             fontSize={'lg'}
                         />
-                        <Button
-                            as={RouterLink}
-                            to='/login'
-                            variant="outline"
-                            fontSize={'lg'}
-                            fontWeight={400}
-                            px="8"
-                        >
-                            Live Preview
-                        </Button>
                     </Stack>
                 </Flex>
             </Container>
