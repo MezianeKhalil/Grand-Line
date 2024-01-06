@@ -1,7 +1,12 @@
 import { Box, Container, Image, Grid, GridItem, Heading, Text, VStack, useColorModeValue } from '@chakra-ui/react'
 
 import { ChakraUiIcon, ReactIcon, TypescriptIcon, ViteJsIcon, FsdIcon, I18nIcon } from "@/shared/assets/icons"
-import { FeaturesContent } from '@/shared/types'
+
+export interface FeaturesContent {
+    title: string
+    content: string
+    icon?: string
+}
 
 const featuresContent: Array<FeaturesContent> = [
     {
