@@ -1,13 +1,9 @@
 import { Box, Container, Image, Grid, GridItem, Heading, Text, VStack, useColorModeValue } from '@chakra-ui/react'
 
 import { ChakraUiIcon, ReactIcon, TypescriptIcon, ViteJsIcon, FsdIcon, I18nIcon } from "@/shared/assets/icons"
-interface FeaturesContentTypes {
-    title: string
-    content: string
-    icon?: string
-}
+import { FeaturesContent } from '@/shared/types'
 
-const featuresContent: Array<FeaturesContentTypes> = [
+const featuresContent: Array<FeaturesContent> = [
     {
         title: 'ReactJs',
         icon: ReactIcon,
@@ -76,7 +72,7 @@ export default function Features () {
     )
 }
 
-const FeatureCard = ({ feature: { title, content, icon } }: { feature: FeaturesContentTypes } ) => {
+const FeatureCard = ({ feature: { title, content, icon } }: { feature: FeaturesContent } ) => {
     return (
         <VStack bg={useColorModeValue('white', 'gray.800')} h='full' align="start" border="1px" p="4" borderColor={useColorModeValue('gray.200', 'gray.700')} rounded="md">
             <Box w='10' h="10">
