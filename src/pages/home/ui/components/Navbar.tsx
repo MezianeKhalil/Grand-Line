@@ -3,6 +3,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import { FaGithub } from "react-icons/fa"
 
 import { ThemeToggle } from '@/shared/ui/themeToggle'
+import { BRAND_NAME } from '@/shared/constants'
 
 export default function Navbar () {
     return (
@@ -28,7 +29,7 @@ export default function Navbar () {
                             fontWeight="medium"
                             color={useColorModeValue('gray.800', 'white')}
                         >
-                            GrandLine
+                            {BRAND_NAME}
                         </Text>
                     </Flex>
 

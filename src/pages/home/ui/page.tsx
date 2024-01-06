@@ -1,11 +1,12 @@
 import { Navbar, Header, Features, Footer, Codebase } from "./components"
 import { Head } from '@/shared/ui/head'
+import { BRAND_NAME } from "@/shared/constants"
 
 export default function Home () {
     return (
         <>
             <Head>
-                <title>Grand Line | Home</title>
+                <title>{BRAND_NAME} | Home</title>
             </Head>
             <Navbar />
             <Header />
