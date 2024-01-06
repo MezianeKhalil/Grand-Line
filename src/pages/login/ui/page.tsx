@@ -1,8 +1,8 @@
 import { Flex, VStack, useColorModeValue } from "@chakra-ui/react"
 
-import { LoginForm } from './components/form'
+import { LoginForm } from './widgets/form'
 
-export default function LoginPage () {
+export default function Login () {
     return (
         <Flex
             as="main"

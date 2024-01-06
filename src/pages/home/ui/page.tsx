@@ -1,4 +1,4 @@
-import { Navbar, Header, Features, Footer, Codebase } from "./components"
+import { Navbar, Header, Features, Footer, Codebase } from "./widgets"
 import { Head } from '@/shared/ui/head'
 import { BRAND_NAME } from "@/shared/constants"
 
