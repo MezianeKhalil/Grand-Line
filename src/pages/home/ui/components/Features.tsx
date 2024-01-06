@@ -1,7 +1,6 @@
 import { Box, Container, Image, Grid, GridItem, Heading, Text, VStack, useColorModeValue } from '@chakra-ui/react'
 
-import { ChakraUiIcon, ReactIcon, TypescriptIcon, ViteJsIcon } from "@/shared/assets/icons"
-
+import { ChakraUiIcon, ReactIcon, TypescriptIcon, ViteJsIcon, FsdIcon, I18nIcon } from "@/shared/assets/icons"
 interface FeaturesContentTypes {
     title: string
     content: string
@@ -12,22 +11,47 @@ const featuresContent: Array<FeaturesContentTypes> = [
     {
         title: 'ReactJs',
         icon: ReactIcon,
-        content: 'Declarative and efficient JavaScript library for building user interfaces.'
+        content: 'Efficient JavaScript library revolutionizing web development for building interactive user interfaces with easy state management'
     },
     {
         title: 'Components',
         icon: ChakraUiIcon,
-        content: 'UI components built using ChakraUi.'
+        content: 'Streamlines React development with a collection of customizable components, ensuring a quick and stylish creation of responsive user interfaces.'
     },
     {
         title: 'Vite',
         icon: ViteJsIcon,
-        content: 'Next generation frontend tooling'
+        content: 'Next-gen frontend tooling accelerates web development with a lightweight, fast build system. Leveraging native ES module imports, it\'s perfect for modern applications.'
     },
     {
         title: 'Typescript',
         icon: TypescriptIcon,
-        content: 'A language for application-scale JavaScript'
+        content: 'Boosts JavaScript development with static typing for robust, scalable projects. Powerful tools catch errors early, improving code quality and maintainability'
+    },
+    {
+        title: 'Feature-Sliced Design',
+        icon: FsdIcon,
+        content: 'Feature-Sliced Design promotes modular efficiency, organizing code into cohesive slices for streamlined development and enhanced scalability.'
+    },
+    {
+        title: 'Dark Mode',
+        icon: '',
+        content: 'The app effortlessly adjusts to your system settings, automatically switching to dark mode to enhance user comfort and aesthetics.'
+    },
+    {
+        title: 'i18next',
+        icon: I18nIcon,
+        content: 'The app excels in internationalization (i18n), seamlessly adapting to various languages and cultural nuances for a truly global user experience'
+    },
+    {
+        title: 'React Helmet',
+        icon: '',
+        content: 'A document head manager for React, that allows you to easily manage the document head'
+    },
+    {
+        title: 'Auto import',
+        icon: '',
+        content: 'The coding environment boasts alias path simplicity and automatic imports, streamlining development for concise and efficient coding'
     }
 ]
 
@@ -56,9 +80,8 @@ const FeatureCard = ({ feature: { title, content, icon } }: { feature: FeaturesC
     return (
         <VStack bg={useColorModeValue('white', 'gray.800')} h='full' align="start" border="1px" p="4" borderColor={useColorModeValue('gray.200', 'gray.700')} rounded="md">
             <Box w='10' h="10">
-                <Image src={icon} alt="" />
+                <Image src={icon} alt="" width="100%" height="100%" maxW='100%' maxH="100%"/>
             </Box>
-            
             <Heading as="h3" fontSize="2xl">{title}</Heading>
             <Text>{content}</Text>
         </VStack>
